@@ -1,0 +1,18 @@
+.movieCard {
+  @include card-border-2-hover;
+  margin-bottom: 15px;
+  min-width: 155px;
+  height: 280px;
+  a {
+    p {
+      text-align: center;
+      text-decoration: none;
+      color: $dark-grey;
+      font-size: .8rem;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.navbar {
+  color: $coral;
+  background-color: $blue-navy;
+  border-radius: 0;
+  @include card-border-2;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  color: $coral;
+  font-family: $brandFont;
+}
+
+.navbar-brand:hover {
+  color: $white;
+}
+
+#searchButton {
+  color: $coral;
+  border-color: $coral;
+}
+
+#searchButton:hover {
+  color: $white;
+  background-color: $coral;
+  cursor: pointer;
+}

@@ -1,0 +1,16 @@
+.table {
+  table-layout: fixed;
+}
+
+.listView {
+  margin-top: 15px;
+}
+
+.yearField, .ratedField, .titleField  {
+  text-align: left;
+  padding: 0;
+}
+
+.yearHeader, .ratedHeader, .posterHeader  {
+  width: 100px;
+}
