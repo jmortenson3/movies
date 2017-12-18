@@ -8,10 +8,36 @@ import MovieAPI from '../api';
 
 /**
  * Generate either a MovieList or an array of MovieCard's.
+ * 
+ * <= 767px width changes the layout to table.  >767px is cards.
  */
 class MovieGrouping extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      screenWidth: 100
+    }
+    this.updateDimensions = this.updateDimensions.bind(this);
+  }
+
+  updateDimensions() {
+    const screenWidth = window.innerWidth;
+    this.setState({screenWidth: screenWidth});
+  }
+
+  componentDidMount() {
+    this.updateDimensions();
+    window.addEventListener("resize", this.updateDimensions);
+  }
+
+  componentWillMount() {
+    window.removeEventListener("resize", this.updateDimensions);
+  }
+
   render() {
-    let displayType = this.props.displayType === undefined ? 'List' : this.props.displayType;
+    const screenWidth = this.state.screenWidth;
+    let displayType = screenWidth <= 767 ? 'List' : 'Cards';
     console.log(`Begin rendering a ${displayType} view.`);
     let searchVal = this.props.match.params.genre;
     let imgSize = displayType === 'Cards' ? 1 : .5;
@@ -62,7 +88,7 @@ class MovieGrouping extends Component {
       movieGroup = 
         <div className="row genreRow">
           <div className="row col-md-12 genreTitle">
-            <h3>{ searchVal }</h3>
+            <h2>{ searchVal }</h2>
           </div>
           <div className="row flex-row genreMovies col-md-12">
             { movieList }

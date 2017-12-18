@@ -55,17 +55,23 @@ html, body {
     font-size: .8rem; }
   .movieCard a img {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding-top: 15px; }
 
 .table {
-  table-layout: fixed; }
+  table-layout: fixed;
+  padding-left: 25px; }
+  .table tbody tr td {
+    vertical-align: middle; }
 
 .listView {
-  margin-top: 15px; }
+  margin: 15px 0; }
 
 .yearField, .ratedField, .titleField {
-  text-align: left;
-  padding: 0; }
+  text-align: left; }
 
-.yearHeader, .ratedHeader, .posterHeader {
+.yearHeader, .ratedHeader {
+  width: 75px; }
+
+.posterHeader {
   width: 100px; }
