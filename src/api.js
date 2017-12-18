@@ -2,7 +2,7 @@
 // create a src/api/ directory.
 // The API documentation for the TMBB can be found here:
 // https://developers.themoviedb.org/3
-let CONFIG = require('../config.json');
+let CONFIG = require('./config.json');
 const baseUrl = 'https://developers.themoviedb.org/3';
 const API_KEY = CONFIG.API_KEY;
 const externalIdSource = 'imdb_id';
