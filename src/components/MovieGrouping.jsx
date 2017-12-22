@@ -37,7 +37,7 @@ class MovieGrouping extends Component {
 
   render() {
     const screenWidth = this.state.screenWidth;
-    let displayType = screenWidth <= 767 ? 'List' : 'Cards';
+    let displayType = screenWidth <= 1000 ? 'List' : 'Cards';
     console.log(`Begin rendering a ${displayType} view.`);
     let searchVal = this.props.match.params.genre;
     let imgSize = displayType === 'Cards' ? 1 : .5;

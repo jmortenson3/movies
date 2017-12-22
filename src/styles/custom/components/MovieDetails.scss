@@ -1,0 +1,20 @@
+.MovieDetails .col {
+  margin-top: 25px;
+  img {
+    float: left;
+    margin-right: 15px;
+  }
+}
+
+.movieDetailsText {
+}
+
+.releasedDate, .ratedText {
+  font-size: 1rem;
+}
+
+.releasedDate {
+  line-height: 100%;
+  padding-left: 15px;
+  vertical-align: middle; 
+}

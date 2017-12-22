@@ -9,7 +9,9 @@ html, body {
   padding: 0; }
 
 .row {
-  max-width: 100%; }
+  max-width: 100%;
+  padding: 0;
+  margin: 0; }
 
 .navbar {
   color: #f54738;
@@ -37,14 +39,15 @@ html, body {
 .movieInThumbList:hover {
   cursor: pointer; }
 
-.genreRow, .genreMovies, .genreTitle {
-  margin: 0; }
+.genreTitle {
+  padding-left: 15px; }
 
 .movieCard {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin-bottom: 15px;
   min-width: 155px;
+  max-width: 170px;
   height: 280px; }
   .movieCard:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
@@ -75,3 +78,17 @@ html, body {
 
 .posterHeader {
   width: 100px; }
+
+.MovieDetails .col {
+  margin-top: 25px; }
+  .MovieDetails .col img {
+    float: left;
+    margin-right: 15px; }
+
+.releasedDate, .ratedText {
+  font-size: 1rem; }
+
+.releasedDate {
+  line-height: 100%;
+  padding-left: 15px;
+  vertical-align: middle; }

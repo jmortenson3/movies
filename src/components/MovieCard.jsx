@@ -5,7 +5,7 @@ import MovieThumbnail from './MovieThumbnail';
 class MovieCard extends Component {
   render() {
     return (
-      <div className="col-md-3">
+      <div className="col-md-2">
         <div className="movieCard">
           <Link to={`/movies/id/${ this.props.id }`}>
             <MovieThumbnail
