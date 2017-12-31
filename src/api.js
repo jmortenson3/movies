@@ -5,6 +5,7 @@
 let CONFIG = require('./config.json');
 const baseUrl = 'https://developers.themoviedb.org/3';
 const API_KEY = CONFIG.API_KEY;
+const BASE_URL = CONFIG.BASE_URL;
 const externalIdSource = 'imdb_id';
 //TODO
 // replace this array and the functions below with omdbapi.com calls
@@ -81,11 +82,11 @@ const MovieAPI = {
   },
 
   /**
-   * Get a list of genres.
+   * Get a list of movie genres.
    */
   getGenres: function() {
     // gets mock data from the genres object
-    return this.genres;
+    return fetch(`${BASE_URL}/genre/movie/list?api_key=${API_KEY}`);    //return this.genres;
   }
 }
 

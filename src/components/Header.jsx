@@ -1,23 +1,33 @@
 import React, { Component } from 'react';
+import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-class NavBar extends Component {
+class Header extends Component {
+
   render() {
     return (
-      <nav className="navbar justify-content-between">
-        <Link to='/' className="navbar-brand">Watch List</Link>
-        <form className="form-inline">
-          <input 
-            className="form-control mr-sm-2" 
-            id="searchInput" 
-            type="search" 
-            placeholder="Search" 
-            aria-label="Search" />
-          <button className="btn btn-outline-success my-2 my-sm-0" id="searchButton" type="submit">Search</button>
-        </form>
-      </nav>
-    )
+      <Navbar className="headerNav">
+        <Navbar.Header>
+          <Navbar.Brand>
+          <Link to='/' className="navbar-brand">Watch List</Link>
+          </Navbar.Brand>
+        </Navbar.Header>
+        <Nav>
+          <NavItem eventKey={1} href="#"></NavItem>
+          <NavDropdown eventKey={3} title="Movies" id="basic-nav-dropdown">
+            <MenuItem eventkey={3.1} href={`/movies/genres`}>Genres</MenuItem>
+            <MenuItem eventkey={3.1} href={`/movies/genres`}>Now Showing</MenuItem>
+          </NavDropdown>
+        </Nav>
+      </Navbar>
+    );
   }
 }
 
-export default NavBar;
+export default Header;
+
+//<MenuItem eventkey={3.1} href={`/movies/genres`}>Genres</MenuItem>
+//<MenuItem eventkey={3.1} href={`/movies/genres`}>Now Showing</MenuItem>
+//
+//<Link eventkey={3.1} to={`/movies/genres`}>Genres</Link><br />
+//<Link eventkey={3.1} to={`/movies/genres`}>Now Showing</Link>

@@ -3,13 +3,12 @@ import MovieCard from './MovieCard';
 import MovieListItem from './MovieListItem';
 import NoMoviesFound from './NoMoviesFound';
 import MovieList from './MovieList';
-import NavButton from './NavButton';
 import MovieAPI from '../api';
 
 /**
  * Generate either a MovieList or an array of MovieCard's.
  * 
- * <= 767px width changes the layout to table.  >767px is cards.
+ * <= 1000px width changes the layout to table.  > 1000px is cards.
  */
 class MovieGrouping extends Component {
 
@@ -31,14 +30,13 @@ class MovieGrouping extends Component {
     window.addEventListener("resize", this.updateDimensions);
   }
 
-  componentWillMount() {
+  componentWillUnmount() {
     window.removeEventListener("resize", this.updateDimensions);
   }
 
   render() {
     const screenWidth = this.state.screenWidth;
     let displayType = screenWidth <= 1000 ? 'List' : 'Cards';
-    console.log(`Begin rendering a ${displayType} view.`);
     let searchVal = this.props.match.params.genre;
     let imgSize = displayType === 'Cards' ? 1 : .5;
     let imgWidth = 150 * imgSize;

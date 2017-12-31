@@ -13,29 +13,6 @@ html, body {
   padding: 0;
   margin: 0; }
 
-.navbar {
-  color: #f54738;
-  background-color: #043452;
-  border-radius: 0;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
-
-.navbar-brand {
-  font-size: 2rem;
-  color: #f54738;
-  font-family: "Lobster", sans-serif; }
-
-.navbar-brand:hover {
-  color: #fff; }
-
-#searchButton {
-  color: #f54738;
-  border-color: #f54738; }
-
-#searchButton:hover {
-  color: #fff;
-  background-color: #f54738;
-  cursor: pointer; }
-
 .movieInThumbList:hover {
   cursor: pointer; }
 
@@ -62,13 +39,12 @@ html, body {
     padding-top: 15px; }
 
 .table {
-  table-layout: fixed;
-  padding-left: 25px; }
+  table-layout: fixed; }
   .table tbody tr td {
     vertical-align: middle; }
 
 .listView {
-  margin: 15px 0; }
+  margin: 25px; }
 
 .yearField, .ratedField, .titleField {
   text-align: left; }

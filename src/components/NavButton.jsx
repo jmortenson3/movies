@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 class NavButton extends Component {
   render() {
     return (
-      <div className={this.props.styles}>
-        <Link to={ this.props.url }>
-          { this.props.text }
+      <li className={this.props.styles}>
+        <Link to={`/movies/genre/${this.props.name}`}>
+          {this.props.name}
         </Link>
-      </div>
+      </li>
     );
   }
 }
